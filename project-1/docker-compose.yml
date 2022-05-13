@@ -1,0 +1,31 @@
+version: "3"
+
+#All the containers that we will be running!
+#We can label our service, whatever we want
+services:
+  spring:
+    image: 'project1-app:latest'
+    restart: on-failure
+    container_name: app
+    ports:
+      - 80:80
+    environment:
+      - DB_USERNAME=root
+      - DB_PASSWORD=P@ssword2022
+    depends_on:
+      - db
+  Emailing:
+    image: 'project1/email-app'
+    container_name: email-app
+    ports:
+      - 8080:8080
+  db:
+    container_name: db
+    image: 'mysql:8.0'
+    environment:
+      - MYSQL_ROOT_PASSWORD=P@ssword2022
+      - MYSQL_DATABASE=Users
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata:
