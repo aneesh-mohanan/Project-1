@@ -30,9 +30,9 @@ List of features ready
 
 ## Getting Started
    
-Git clone command: git clone https://github.com/aneesh-mohanan/Project-1.git
-Move to the project-1 repository by command: cd Project-1/project-1
-Then run the docker compose up command( GCP cloud SQL needs to be running with a Users database)
+* Git clone command: git clone https://github.com/aneesh-mohanan/Project-1.git
+* Move to the project-1 repository by command: cd Project-1/project-1
+* Then run the docker compose up command( GCP cloud SQL needs to be running with a Users database)
 
 ## Usage
 
